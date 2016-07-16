@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.songtaste.MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/dark" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="iSongTaste"
+            android:textColor="@color/graywhite"
+            android:textSize="23dp" />
+
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:background="@drawable/seeting_selector"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="46dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="45dp"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search_selector"
+                android:clickable="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_songList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:divider="#A5A5A5" >
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+        <TextView
+            android:id="@+id/tv_songinfo"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:background="#993e3e3e"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="正在播放："
+            android:textColor="@color/graywhite"
+            android:textSize="10sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/lessdark" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:max="100"
+            android:padding="0dp"
+            android:progress="0"
+            android:progressTint="#f00"
+            android:secondaryProgressTint="@color/lightblue" />
+
+        <ImageView
+            android:id="@+id/iv_songpic"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:clickable="true"
+            android:src="@drawable/defaulticon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_pre"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/prebtn_selector"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/iv_center"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_pre"
+                android:clickable="true"
+                android:src="@drawable/widget_control_play_hover" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_center"
+                android:background="@drawable/nextbtn_selector"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_songlist"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="23dp"
+            android:clickable="true"
+            android:src="@drawable/global_comment_like_selected" />
+    </RelativeLayout>
+
+</LinearLayout>

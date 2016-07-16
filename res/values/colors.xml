@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lessbalck">#383838</color>
+    <color name="dark">#212121</color>
+    <color name="lessdark">#3B3B3B</color>
+    <color name="lightblue">#55D4D2</color>
+    <color name="darkblue">#43A8A7</color>
+    <color name="graywhite">#DEDEDE</color>
+    <color name="lightwhite">#55DEDEDE</color>
+    <color name="darkwhite">#F5F5F5</color>
+</resources>

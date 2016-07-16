@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relayout"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@color/lessbalck" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp" >
+
+        <TextView
+            android:id="@+id/tv_isplaying"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightblue"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/circle_head" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_img"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/iv_img"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="Begin Again"
+                android:textColor="@color/lightblue"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_posttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:text="30秒前"
+                android:textColor="@color/graywhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/iv_img"
+            android:text="Taylor Swift"
+            android:textColor="@color/graywhite"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#5E5E5E" />
+    </RelativeLayout>
+
+</RelativeLayout>
