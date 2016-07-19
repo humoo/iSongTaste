@@ -10,6 +10,7 @@ import com.example.songtaste.R;
 import com.example.songtaste.R.drawable;
 import com.example.songtaste.R.id;
 import com.example.songtaste.R.layout;
+import com.example.songtaste.service.PlayerService;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -77,6 +78,13 @@ public class SongListAdapter extends BaseAdapter{
 			bitmap=BitmapFactory.decodeResource(context.getResources(), R.drawable.defaulticon);
 		}else {
 			bitmap=BitmapFactory.decodeFile(map.get("userPic"));
+		}
+		
+		if (PlayerService.player!=null) {
+			if (PlayerService.songID.equals(map.get("songID"))) {
+				isplaying.setVisibility(View.VISIBLE);
+				
+			}
 		}
 		
 //		view.setOnClickListener(new OnClickListener() {			

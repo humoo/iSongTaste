@@ -94,6 +94,7 @@ public class MainActivity extends Activity implements OnClickListener{
 				songinfo.setText("正在播放："+((String) msg.obj).split(",")[1]);
 				bitmap=BitmapFactory.decodeFile(picPath);
 				iconPic.setImageBitmap(bitmap);
+				adapter.notifyDataSetChanged();
 			}
 			if (msg.what==0x003) {//改变页面数据，刷新页面
 				try {

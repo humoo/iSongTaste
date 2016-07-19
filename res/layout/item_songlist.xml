@@ -3,7 +3,8 @@
     android:id="@+id/relayout"
     android:layout_width="match_parent"
     android:layout_height="85dp"
-    android:background="@color/lessbalck" >
+    android:background="@color/lessbalck"
+    android:descendantFocusability="blocksDescendants" >
 
     <RelativeLayout
         android:layout_width="match_parent"

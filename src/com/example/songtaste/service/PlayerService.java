@@ -44,7 +44,7 @@ public class PlayerService extends Service {
 	static Map<String, String> map;
 	static int _id=0;
 	public static String songName;
-	static String songID;
+	public static String songID;
 	static String userPic;
 	static String userName;
 	public static Handler handler=new Handler(){

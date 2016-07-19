@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.songtaste.R;
+import com.example.songtaste.service.PlayerService;
 
 public class LoveListAdapter extends BaseAdapter {
 
@@ -60,6 +61,15 @@ public class LoveListAdapter extends BaseAdapter {
 		songName.setText(map.get("songName"));
 		userName.setText(map.get("userName"));
 		postTime.setVisibility(View.GONE);
+		
+		
+		if (PlayerService.player!=null) {
+			if (PlayerService.songID.equals(map.get("songID"))) {
+				isplaying.setVisibility(View.VISIBLE);
+				
+			}
+		}
+		
 		if (map.get("userPic").contains("default.gif")) {
 			bitmap = BitmapFactory.decodeResource(context.getResources(),
 					R.drawable.defaulticon);
